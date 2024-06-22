@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/styles.css">
     <link rel="shortcut icon" href="/images/icone.ico">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="/scripts.js" defer></script>
 </head>
 <body>
     <header>
@@ -21,113 +22,156 @@
         </label>
         <ul>
             <li><a href="/pages/menu.html" class="active">Menu</a></li>
-            <li><a href="/pages/about.html">About</a></li>
-            <li><a href="/pages/contact.html">Contact</a></li>
-            <li><a href="/pages/orders.html" class="order-id">Orders</a></li>
+            <li><a href="/pages/about.html">Sobre</a></li>
+            <li><a href="/pages/contact.html">Contato</a></li>
         </ul>
     </header>
     <div class="nav-menu">
-        <form action="#pizzas">
-            <button class="nav-button">
-                <img src="/images/pizza.svg" class="nav-menu-img">
-        <h1 class="button-name">Pizzas</h1>
-            </button>
-         </form>
-        <form action="#bebidas">
-            <button class="nav-button">
-                <img src="/images/bebida.svg" class="nav-menu-img">
-                <h1 class="button-name">Bebidas</h1>
-            </button>
-        </form>
+        <button class="nav-button" id="pizza-button">
+            <img src="/images/pizza.svg" class="nav-menu-img">
+            <h1 class="button-name">Pizzas</h1>
+        </button>
+        <button class="nav-button" id="bebida-button">
+            <img src="/images/bebida.svg" class="nav-menu-img">
+            <h1 class="button-name">Bebidas</h1>
+        </button>
     </div>
-    <h1 id="pizzas">Pizzas Salgadas</h1>
-    <div class="menu-pizza">
-        <div class="pizza">
-            <img src="/images/calabresa.png">
-            <div class="text-product">
-                <h2>Calabresa</h2>
-                <p>Molho de tomate artesanal, Mussarela, Calabresa, Tomate, Cebola, Orégano e Manjericão.</p>
-                <h3>A partir de R$49,00</h3>
+    <div class="itens">
+        <div id="div-pizzas" class="invisible">
+            <h1 id="pizzas">Pizzas Salgadas</h1>
+            <div class="menu-pizza">
+                <div class="pizza">
+                    <img src="/images/calabresa.png">
+                    <div class="text-product">
+                        <h2>Calabresa</h2>
+                        <p>Molho de tomate artesanal, Mussarela, Calabresa, Tomate, Cebola, Orégano e Manjericão.</p>
+                        <h3>A partir de R$49,00</h3>
+                        <button class="add-to-cart" data-name="Calabresa" data-price="49">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="pizza">
+                    <img src="/images/portuguesa.png">
+                    <div class="text-product">
+                        <h2>Portuguesa</h2>
+                        <p>Molho de Tomate Artesanal, Mussarela, Presunto, Ovo, Milho, Calabresa, Pimentão, Cebola, Manjericão, Orégano.</p>
+                        <h3>A partir de R$59,00</h3>
+                        <button class="add-to-cart" data-name="Portuguesa" data-price="59">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="pizza">
+                    <img src="/images/queijos.png">
+                    <div class="text-product">
+                        <h2>4 Queijos</h2>
+                        <p>Molho, Mussarela, Provolone, Parmesão, Gorgonzola, Tomate e Orégano.</p>
+                        <h3>A partir de R$52,00</h3>
+                        <button class="add-to-cart" data-name="4 Queijos" data-price="52">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="pizza">
+                    <img src="/images/frango.png">
+                    <div class="text-product">
+                        <h2>Frango Catupiry</h2>
+                        <p>Molho, Mussarela, Frango, Catupiry, Azeitona e Orégano.</p>
+                        <h3>A partir de R$51,00</h3>
+                        <button class="add-to-cart" data-name="Frango Catupiry" data-price="51">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <h1 id="pizzas">Pizzas Doces</h1>
+            <div class="menu-pizza">
+                <div class="pizza">
+                    <img src="/images/brigadeiro.jpeg">
+                    <div class="text-product">
+                        <h2>Brigadeiro</h2>
+                        <p>Chocolate ao leite, granulado e leite condensado.</p>
+                        <h3>A partir de R$45,00</h3>
+                        <button class="add-to-cart" data-name="Brigadeiro" data-price="45">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="pizza">
+                    <img src="/images/beijinho.jpg">
+                    <div class="text-product">
+                        <h2>Beijinho</h2>
+                        <p>Coco, leite condensado e açúcar.</p>
+                        <h3>A partir de R$45,00</h3>
+                        <button class="add-to-cart" data-name="Beijinho" data-price="45">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="pizza">
+                    <img src="/images/ROMEU_E_JULIETA.png">
+                    <div class="text-product">
+                        <h2>Romeu e Julieta</h2>
+                        <p>Queijo, goiabada e leite condensado.</p>
+                        <h3>A partir de R$45,00</h3>
+                        <button class="add-to-cart" data-name="Romeu e Julieta" data-price="45">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="pizza">
+                    <img src="/images/chocolate.jpeg">
+                    <div class="text-product">
+                        <h2>Chocolate</h2>
+                        <p>Chocolate ao leite, chocolate branco e leite condensado.</p>
+                        <h3>A partir de R$45,00</h3>
+                        <button class="add-to-cart" data-name="Chocolate" data-price="45">Add to Cart</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="pizza">
-            <img src="/images/portuguesa.png">
-            <div class="text-product">
-                <h2>Portuguesa</h2>
-                <p>Molho de Tomate Artesanal, Mussarela, Presunto, Ovo, Milho, Calabresa, Pimentão, Cebola, Manjericão, Orégano.</p>
-                <h3>A partir de R$59,00</h3>
-            </div>
-        </div>
-        <div class="pizza">
-            <img src="/images/queijos.png">
-            <div class="text-product">
-                <h2>4 Queijos</h2>
-                <p>Molho, Mussarela, Provolone, Parmesão, Gorgonzola, Tomate e Orégano.</p>
-                <h3>A partir de R$52,00</h3>
-            </div>
-        </div>
-        <div class="pizza">
-            <img src="/images/frango.png">
-            <div class="text-product">
-                <h2>Frango Catupiry</h2>
-                <p>Molho, Mussarela, Frango, Catupiry, Azeitona e Orégano.
-                </p>
-                <h3>A partir de R$51,00</h3>
+        <div id="div-bebidas" class="invisible">
+            <h1 id="bebidas">Bebidas</h1>
+            <div class="menu-bebidas">
+                <div class="bebida">
+                    <img src="/images/agua.png">
+                    <div class="text-product">
+                        <h2>Água sem gás</h2>
+                        <p>Uma deliciosa água sem gás.</p>
+                        <h3>R$3,00</h3>
+                        <button class="add-to-cart" data-name="Água sem gás" data-price="3">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bebida">
+                    <img src="/images/coca2l.png">
+                    <div class="text-product">
+                        <h2>Coca-Cola 2L</h2>
+                        <p>Uma deliciosa Coca-Cola 2 litros.</p>
+                        <h3>R$10,00</h3>
+                        <button class="add-to-cart" data-name="Coca-Cola 2L" data-price="10">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bebida">
+                    <img src="/images/cocalata.png">
+                    <div class="text-product">
+                        <h2>Coca-Cola Lata</h2>
+                        <p>Uma deliciosa Coca-Cola Lata.</p>
+                        <h3>R$4,00</h3>
+                        <button class="add-to-cart" data-name="Coca-Cola Lata" data-price="4">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bebida">
+                    <img src="/images/fanta2l.png">
+                    <div class="text-product">
+                        <h2>Fanta laranja 2L</h2>
+                        <p>Uma deliciosa Fanta laranja 2 litros.</p>
+                        <h3>R$7,00</h3>
+                        <button class="add-to-cart" data-name="Fanta laranja 2L" data-price="7">Add to Cart</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <h1 id="bebidas">Bebidas</h1>
-
-    <div class="menu-bebidas">
-        <div class="bebida">
-            <img src="/images/agua.png">
-            <div class="text-product">
-                <h2>Água sem gás</h2>
-                <p>Uma deliciosa água sem gás.</p>
-                <h3>R$3,00</h3>
-            </div>
-        </div>
-        <div class="bebida">
-            <img src="/images/coca2l.png">
-            <div class="text-product">
-                <h2>Coca-Cola 2L</h2>
-                <p>Uma deliciosa Coca-Cola 2 litros.</p>
-                <h3>R$10,00</h3>
-            </div>
-        </div>
-        <div class="bebida">
-            <img src="/images/cocalata.png">
-            <div class="text-product">
-                <h2>Coca-Cola Lata</h2>
-                <p>Uma deliciosa Coca-Cola Lata.</p>
-                <h3>R$4,00</h3>
-            </div>
-        </div>
-        <div class="bebida">
-            <img src="/images/fanta2l.png">
-            <div class="text-product">
-                <h2>Fanta laranja 2L</h2>
-                <p>Uma deliciosa Fanta laranja 2 litros.</p>
-                <h3>R$7,00</h3>
-            </div>
-        </div>
-        <div class="bebida">
-            <img src="/images/guarana.png">
-            <div class="text-product">
-                <h2>Guaraná Antarctica 2L</h2>
-                <p>Um delicioso Guaraná 2 litros.</p>
-                <h3>R$10,00</h3>
-            </div>
-        </div>
-        <div class="bebida">
-            <img src="/images/sprite.png">
-            <div class="text-product">
-                <h2>Sprite 2L</h2>
-                <p>Uma deliciosa Sprite 2 litros.</p>
-                <h3>R$7,00</h3>
-            </div>
-        </div>
+    <div id="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: R$<span id="total-price">0</span></p>
     </div>
+    <footer>
+        <p>Projeto da Discilpina de desenvolvimento Web</p>
+        <p>Alunos:</p>
+        <ul>
+            <li>Calebe Rodrigues Rolim</li>
+            <li>João Vitor Luiz Soares Silva</li>
+            <li>João Victor Guimarães Santos</li>
+        </ul>
+    </footer>
 </body>
 </html>

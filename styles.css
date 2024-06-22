@@ -221,6 +221,7 @@ header .logo{
     grid-template-columns: 1fr 1fr;
     margin-top: 30px;
     margin-left: 30px;
+
 }
 .bebida{
     display: flex;
@@ -230,7 +231,6 @@ header .logo{
     margin: 10px;
     padding: 32px;
     cursor: pointer;
-    z-index: 1;
     transition: all 0.5s ease;
     box-shadow: 2px 2px 1px 1px black;
 }
@@ -284,6 +284,7 @@ h1{
     margin-top: 180px;
     border-radius: 8px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 35px 0px;
+    margin-bottom: 200px;
 }
 .about h1{
     padding-bottom: 20px;
@@ -327,4 +328,59 @@ h1{
     font-size: 16px;
     background: white;
     cursor: pointer;
+}
+
+
+.invisible{
+    display: none;
+}
+/* Existing styles */
+
+#cart {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    width: 250px;
+    max-height: 400px; /* Set the fixed height */
+    overflow-y: auto;  /* Add vertical scrolling */
+}
+
+#cart h2 {
+    margin-top: 0;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding-left: 0;
+    max-height: 100px; /* Height of the scrollable area */
+    overflow-y: auto;  /* Add vertical scrolling to the items list */
+}
+
+#cart-items li {
+    margin-bottom: 5px;
+}
+
+
+.itens {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 400px;
+}
+
+/* Footer sempre ficara no final da pagina mas so deve ser visivel quando o usuario rolar a pagina */
+footer {
+    clear: both; /* Ensure footer clears floated content */
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 100%;
+    position: fixed; /* or absolute depending on your layout needs */
+    bottom: 0;
+     /* Initially hide the footer */
+    transition: visibility 0.3s ease; /* Optional: add a transition effect */
 }

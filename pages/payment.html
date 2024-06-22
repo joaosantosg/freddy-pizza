@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/payment.css"> <!-- Add this line -->
+    <link rel="shortcut icon" href="/images/icone.ico">
+    <script src="/payment.js" defer></script>
+    <script src="/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/images/freddy_logo.png" id="logo">
+            <h1 id="logo-1"><a href="/index.html">Freddy Fazbear's <br>Pizza</a></h1>
+        </div>
+        <ul>
+            <li><a href="/pages/menu.html">Menu</a></li>
+            <li><a href="/pages/about.html">Sobre</a></li>
+            <li><a href="/pages/contact.html">Contato</a></li>
+        </ul>
+    </header>
+    
+    <div class="payment-page">
+        <h2>Payment</h2>
+        <ul id="payment-items"></ul>
+        <p>Total: R$<span id="payment-total">0</span></p>
+        <form id="payment-form">
+            <label for="card-number">Numero do cartão:</label>
+            <input type="text" id="card-number" required>
+            <label for="expiry-date">Validade:</label>
+            <input type="text" id="expiry-date" required>
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" required>
+            <button type="submit">Reservar</button>
+        </form>
+        <p id="payment-status"></p>
+    </div>
+</body>
+
+</html>
